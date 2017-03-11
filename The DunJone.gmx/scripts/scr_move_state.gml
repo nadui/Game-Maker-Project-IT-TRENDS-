@@ -3,7 +3,11 @@
 scr_get_input();
 
 
-
+ 
+ //get axis
+ 
+ xaxis = (right -left);
+ yaxis = (down - up);
 
 
 
