@@ -6,18 +6,20 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_samurai</sprite>
-    <sprite>sprites\spr_karim</sprite>
-    <sprite>sprites\spr_shakeel</sprite>
+    <sprite>sprites\spr_down</sprite>
+    <sprite>sprites\spr_wall</sprite>
+    <sprite>sprites\spr_up</sprite>
+    <sprite>sprites\spr_left</sprite>
+    <sprite>sprites\spr_right</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\obj_player</object>
-    <object>objects\Wall</object>
+    <object>objects\obj_wall</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
+    <room>rooms\rm_1</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
