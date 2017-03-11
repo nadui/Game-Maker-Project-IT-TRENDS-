@@ -29,8 +29,16 @@
 phy_fixed_rotation =true;
 
 spd = 4
+dash = 45;
 
 image_speed=0;
+scr_get_input();
+state = scr_move_state;
+
+hspd =0;
+vspd =0;
+len = 0; //length
+
 </string>
           </argument>
         </arguments>
@@ -54,30 +62,7 @@ image_speed=0;
           <argument>
             <kind>1</kind>
             <string>///Beweging
-var right = keyboard_check(ord('D'));
-var left = keyboard_check(ord('Q'))
-var up = keyboard_check(ord('Z'));
-var down = keyboard_check(ord('S'));
-if(left){
-phy_position_x-=spd;
-sprite_index = spr_left;
-image_speed = 0.2;
-}
-if(right){
-phy_position_x+=spd;
-sprite_index = spr_right;
-image_speed = 0.2;
-}
-if(up){
-phy_position_y-=spd;
-sprite_index= spr_up;
-image_speed = 0.2;
-}
-if(down){
-phy_position_y+=spd;
-sprite_index = spr_down;
-image_speed = 0.2;
-}
+script_execute(state);
 </string>
           </argument>
         </arguments>
@@ -101,6 +86,32 @@ image_speed = 0.2;
           <argument>
             <kind>1</kind>
             <string>///collide
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Draw the shadow
+
+draw_sprite(spr_shad,image_index,x,y);
+draw_self();
 </string>
           </argument>
         </arguments>
